@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Audio Samples from "Multilingual Speech Synthesis Using Learned Phonetic Representations"</title>
+    <title>Audio Samples from "Pronunciation Dictionary-Free Multilingual Speech Synthesis Using Learned Phonetic Representations"</title>
     <style>
       div {
         margin-bottom: 64px;
@@ -20,14 +20,14 @@
   <body>
     <article>
       <header>
-        <h1>Audio Samples from "Multilingual Speech Synthesis Using Learned Phonetic Representations"</h1>
+        <h1>Audio Samples from "Pronunciation Dictionary-Free Multilingual Speech Synthesis Using Learned Phonetic Representations"</h1>
       </header>
     </article>
     <div>
       <p><b>Authors:</b> Chang Liu, Zhen-Hua Ling and Ling-Hui Chen</p>
-      <b>Abstract:</b> This paper proposes a multilingual speech synthesis method using learned phonetic representations to avoid reliance on the pronunciation dictionaries of target languages. The learned phonetic representations consist of unsupervised phonetic representations (UPR) and supervised phonetic representations (SPR). In this method, a pre-trained wav2vec 2.0 model is adopted to extract UPRs and a language-independent automatic speech recognition (LI-ASR) model is built with a connectionist temporal classification (CTC) loss to extract segment-level SPRs from the audio data of target languages.  Then, an acoustic model using UPRs and SPRs as intermediate representations is designed, which is composed of a UPR predictor, an SPR predictor, and a representation-to-mel-spectrogram (RTM) model. The two predictors generate UPRs and SPRs from texts, respectively. The RTM model first combines UPRs with SPRs using a Transformer-based encoder, and then feeds the merged representations into the decoder to generate mel-spectrograms. Considering the difficulty of collecting large training corpora for all languages in multilingual speech synthesis, the parameters of both the two predictors and the RTM model can be pre-trained on non-target languages to further improve model performance. The results of our experiments on six target languages show that the proposed method outperformed the methods that directly predicted mel-spectrograms from character or phoneme sequences, and pre-training the acoustic model using a multilingual corpus further improved the intelligibility and naturalness of synthetic speech.
+      <b>Abstract:</b> This paper proposes a multilingual speech synthesis method using learned phonetic representations to avoid reliance on the pronunciation dictionaries of target languages. The learned phonetic representations consist of unsupervised phonetic representations (UPR) and supervised phonetic representations (SPR). In this method, a pre-trained wav2vec 2.0 model is adopted to extract UPRs and a language-independent automatic speech recognition (LI-ASR) model is built with a connectionist temporal classification (CTC) loss to extract segment-level SPRs from the audio data of target languages. Then, an acoustic model using UPRs and SPRs as intermediate representations is designed, which is composed of a UPR predictor, an SPR predictor, and a representation-to-mel-spectrogram (RTM) converter. The two predictors generate UPRs and SPRs from texts, respectively. The RTM converter first combines UPRs with SPRs using a Transformer-based encoder, and then feeds the merged representations into a decoder to generate mel-spectrograms. Considering the difficulty of collecting large training corpora for all languages in multilingual speech synthesis, the parameters of both the two predictors and the RTM converter can be pre-trained on non-target languages to further improve model performance. The results of our experiments on six target languages show that the proposed method outperformed the methods that directly predicted mel-spectrograms from character or phoneme sequences, and pre-training the acoustic model using a multilingual corpus further improved the performance of synthetic speech.
       
-      <p><b><em>Listen to this abstract speech synthesized by our proposed method trained on 5 hours data of LJSpeech:</em></b></p>
+      <p><b>Listen to this abstract speech synthesized by our Proposed_PT method trained on 5 hours data of LJSpeech:</b></p>
       <div>
         <audio controls preload="auto"><source src="audio/Abstract.wav"></audio>
       </div>
@@ -56,65 +56,89 @@
             Yet it must have been abundantly plain to the reader that the other evils existing were great and glaring. A brief summary of them will best prove this.
           </td>
           <td class="text">
-            He was in the transport side, when one of his fellows, in endeavoring to strike another prisoner with a large poker, missed his aim, and struck Watkins' knee
+            and "to dispose him, by meditation and seclusion, to return to an honest life."
           </td>
           <td class="text">
-            Another man was hired, himself a convict, whose fees for self and wife were twelve guineas.
+            A committee of aldermen was forthwith appointed to report upon the inspectors' report,
+          </td>
+          <td class="text">
+            Men like Mobbs, the miscreant known as "General Haynau" on account of his blood-thirstiness, still murdered their wives;
           </td>
           <td class="text">
             he would be in some way provided for, he having been for some time previously in abject circumstances.
           </td>
-          <td class="text">
-            The murdered individual was thus identified. The next step was to ascertain where and with whom she had last been seen.
-          </td>
         </tr>
         <tr>
           <td class="first-col">Ground Truth</td>
-          <td><audio controls="" preload="auto"><source src="audio/en/gt/LJ003-0221.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/gt/LJ006-0243.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/gt/LJ009-0302.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/gt/LJ010-0235.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/gt/LJ012-0260.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/GT/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/GT/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/GT/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/GT/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/GT/LJ010-0235.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">Taco_Char</td>
-          <td><audio controls="" preload="auto"><source src="audio/en/char/LJ003-0221.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/char/LJ006-0243.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/char/LJ009-0302.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/char/LJ010-0235.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/char/LJ012-0260.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Char/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Char/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Char/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Char/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Char/LJ010-0235.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">Taco_Phone</td>
-          <td><audio controls="" preload="auto"><source src="audio/en/phone/LJ003-0221.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/phone/LJ006-0243.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/phone/LJ009-0302.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/phone/LJ010-0235.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/phone/LJ012-0260.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">SPR</td>
-          <td><audio controls="" preload="auto"><source src="audio/en/SPR/LJ003-0221.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/SPR/LJ006-0243.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/SPR/LJ009-0302.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/SPR/LJ010-0235.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/SPR/LJ012-0260.wav"></audio></td>
-        </tr>
-        <tr>
-          <td class="first-col">UPR</td>
-          <td><audio controls="" preload="auto"><source src="audio/en/UPR/LJ003-0221.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/UPR/LJ006-0243.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/UPR/LJ009-0302.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/UPR/LJ010-0235.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/UPR/LJ012-0260.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Phone/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Phone/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Phone/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Phone/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Taco_Phone/LJ010-0235.wav"></audio></td>
         </tr>
         <tr>
           <td class="first-col">Proposed</td>
-          <td><audio controls="" preload="auto"><source src="audio/en/proposed/LJ003-0221.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/proposed/LJ006-0243.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/proposed/LJ009-0302.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/proposed/LJ010-0235.wav"></audio></td>
-          <td><audio controls="" preload="auto"><source src="audio/en/proposed/LJ012-0260.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed/LJ010-0235.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Proposed_PT</td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed_PT/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed_PT/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed_PT/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed_PT/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed_PT/LJ010-0235.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Proposed-UPR</td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR/LJ010-0235.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Proposed-SPR</td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR/LJ010-0235.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Proposed-UPR-Tr</td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR-Tr/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR-Tr/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR-Tr/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR-Tr/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-UPR-Tr/LJ010-0235.wav"></audio></td>
+        </tr>
+        <tr>
+          <td class="first-col">Proposed-SPR-Tr</td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR-Tr/LJ003-0221.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR-Tr/LJ007-0141.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR-Tr/LJ007-0181.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR-Tr/LJ010-0040.wav"></audio></td>
+          <td><audio controls="" preload="auto"><source src="audio/en/Proposed-SPR-Tr/LJ010-0235.wav"></audio></td>
         </tr>
         </tbody>
       </table>
